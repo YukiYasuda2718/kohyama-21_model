@@ -10,17 +10,20 @@ This repository contains source code for a model describing boundary current syn
 
 1. Make `.env`: `$ ./make_env.sh`
 2. Install [docker](https://www.docker.com)
-3. Build a container image: `$ docker compose build pytorch_linux`
-4. Start a container: `$ docker compose up -d pytorch_linux`
-5. Connect to JupyterLab (`http://localhost:9999/lab?`)
+3. Build a container image: `$ docker compose build python_linux`
+4. Start a container: `$ docker compose up -d python_linux`
+5. Connect to JupyterLab [`http://localhost:9999/lab?`](http://localhost:9999/lab?)
 
 ## Mac (only for apple silicon)
 
 1. Make `.env`: `$ ./make_env.sh`
 2. Install [docker](https://www.docker.com)
-3. Build a container image: `$ docker compose build pytorch_mac`
-4. Start a container: `$ docker compose up -d pytorch_mac`
-5. Connect to JupyterLab (`http://localhost:7777/lab?`)
+3. Build a container image: `$ docker compose build python_mac`
+4. Start a container: `$ docker compose up -d python_mac`
+5. Connect to JupyterLab [`http://localhost:7777/lab?`](`http://localhost:7777/lab?`)
 
 # Run the model
 
+1. Start a container and connect to JupyterLab, following the above instructions.
+2. Go to `python` directory and start a notebook `run_model.ipynb`
+3. Run all the cells in the notebook.
