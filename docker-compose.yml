@@ -1,9 +1,9 @@
 version: "3"
 services:
-  pytorch_linux:
+  python_linux:
     user: "${UID}:${GID}"
     build:
-      context: ./docker/pytorch_linux
+      context: ./docker/python_linux
     tty: true
     ports:
       - "9999:8888"
@@ -12,14 +12,14 @@ services:
     volumes:
       - ./python:/workspace/python:cached
     command: poetry run jupyter lab --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
-  pytorch_mac:
+  python_mac:
     user: "${UID}:${GID}"
     shm_size: "5gb"
     build:
-      context: ./docker/pytorch_mac
+      context: ./docker/python_mac
     tty: true
     ports:
-      - "8888:8888"
+      - "7777:8888"
     environment:
       - PYTHONPATH=/workspace/python
     volumes:
