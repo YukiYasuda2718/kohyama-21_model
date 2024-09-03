@@ -20,7 +20,7 @@ This repository contains source code for a model describing boundary current syn
 2. Install [docker](https://www.docker.com)
 3. Build a container image: `$ docker compose build python_mac`
 4. Start a container: `$ docker compose up -d python_mac`
-5. Connect to JupyterLab [`http://localhost:7777/lab?`](`http://localhost:7777/lab?`)
+5. Connect to JupyterLab [`http://localhost:7777/lab?`](http://localhost:7777/lab?)
 
 # Run the model
 
