@@ -23,6 +23,7 @@ statsmodels = "^0.14.0"
 numba = "^0.58.1"
 cython = "^3.0.5"
 torch = {url = "https://download.pytorch.org/whl/cpu/torch-2.1.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl#sha256=84fefd63356416c0cd20578637ccdbb82164993400ed17b57c951dd6376dcee8"}
+f90nml = "^1.4.4"
 
 
 [tool.poetry.group.dev.dependencies]
