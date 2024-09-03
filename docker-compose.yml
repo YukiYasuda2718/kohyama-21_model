@@ -1,0 +1,27 @@
+version: "3"
+services:
+  pytorch_linux:
+    user: "${UID}:${GID}"
+    build:
+      context: ./docker/pytorch_linux
+    tty: true
+    ports:
+      - "9999:8888"
+    environment:
+      - PYTHONPATH=/workspace/python
+    volumes:
+      - ./python:/workspace/python:cached
+    command: poetry run jupyter lab --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
+  pytorch_mac:
+    user: "${UID}:${GID}"
+    shm_size: "5gb"
+    build:
+      context: ./docker/pytorch_mac
+    tty: true
+    ports:
+      - "8888:8888"
+    environment:
+      - PYTHONPATH=/workspace/python
+    volumes:
+      - ./python:/workspace/python:cached
+    command: poetry run jupyter lab --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
